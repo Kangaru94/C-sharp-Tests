@@ -1,0 +1,36 @@
+//Was given a small class with two errors, instructed to find and correct errors
+//This is the original code
+
+using System;
+
+public class MathUtils
+{
+    //We need a double for the answer, but both numbers given are int. At least one must be a double.
+    public static double Average(int a, int b)
+    {
+        //PEMDAS, this divides before it adds, incorrect for finding the average
+        return a + b / 2;
+    }
+    
+    public static void Main(string[] args)
+    {
+        Console.WriteLine(Average(2, 1));
+    }
+}
+
+//This is the code as I changed it
+
+using System;
+
+public class MathUtils
+{
+    public static double Average(double a, double b)
+    {
+        return (a + b) / 2;
+    }
+    
+    public static void Main(string[] args)
+    {
+        Console.WriteLine(Average(2, 1));
+    }
+}
